@@ -978,7 +978,7 @@ function renderCard(p) {
       <div class="v-prices"><span class="p-old">${v.op}</span><span class="p-new">${v.np}</span></div>
     </div>`).join('');
 
-  const colClass = p.v.length >= 8 ? ' cols2' : '';
+  const colClass = '';
   const srchStr = (p.name + ' ' + p.brand + ' ' + p.v.map(v=>v.code+' '+v.desc).join(' ')).toLowerCase();
   return `<div class="card${colClass}" data-g="${p.g}" data-s="${srchStr}">
     <div class="card-img-wrap">${imgHTML}</div>
