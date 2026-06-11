@@ -205,7 +205,7 @@ function makePH(brand){return `<div class="ph"><svg width="40" height="40" viewB
 function renderCard(p){
   const img = p.img ? `<img src="${p.img}" alt="${p.name}" loading="lazy" onerror="this.parentNode.innerHTML=makePH('${p.brand.replace(/'/g,"\\'")}')">` : makePH(p.brand);
   const vars = p.v.map(v=>`<div class="variant"><div class="v-code">${v.code}</div><div class="v-desc">${v.desc}</div><div class="v-prices"><span class="p-old">${v.op}</span><span class="p-new">${v.np}</span></div></div>`).join('');
-  const col = p.v.length>=8?' cols2':'';
+  const col = '';
   return `<div class="card${col}"><div class="card-img-wrap">${img}</div><div class="card-right"><span class="card-brand">${p.brand}</span><div class="card-name">${p.name}</div><div class="variants">${vars}</div></div></div>`;
 }
 
